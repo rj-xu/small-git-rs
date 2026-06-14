@@ -1,0 +1,34 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb-dap",
+            "request": "launch",
+            "name": "Debug with Input",
+            "program": "${workspaceFolder}/target/debug/small-git-rs.exe",
+            "args": ["${input:userInput}"],
+            "env": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb-dap",
+            "request": "launch",
+            "name": "Debug (hello)",
+            "program": "${workspaceFolder}/target/debug/small-git-rs.exe",
+            "args": ["hello"],
+            "env": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "userInput",
+            "type": "promptString",
+            "description": "请输入参数",
+            "default": "hello"
+        }
+    ]
+}
